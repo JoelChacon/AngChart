@@ -6,7 +6,8 @@ exports.postInfo = function(req, res) {
 		if(err) {
 			res.status(500).json(err);
 		} else {
-			console.log(info);
+			console.log("servCtrl line 9", {data: req.body})
+			console.log("line 10 info",info);
 			res.json(info);
 		}
 	})
