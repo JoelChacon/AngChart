@@ -15,7 +15,7 @@ app.factory('myFactory', function($http, $q) {
 		postInfo: function(info) {
 			var tempArr = [];
 
-			for(var i = 1; i <=12; i++) {
+			for(var i = 1; i <= 12; i++) {
 				tempArr.push(info['num' + i]);
 			}
 			return $http({

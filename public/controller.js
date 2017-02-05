@@ -1,12 +1,10 @@
 angular.module('myApp').controller('myCtrl', function($scope,$rootScope,$http, $q, myFactory) {
 
 	$scope.heyThere = myFactory.heyHey();
-    // console.log("response", myFactory.myObject)
 	$scope.names = myFactory.myObject;
     ////////
     $scope.data = {};
     $scope.addData = function() {
-        console.log("adding data, object", $scope.data);
          myFactory.postInfo($scope.data).then(function(data) {
             $scope.storedData = data;
             $rootScope.$broadcast("updateData");    
@@ -42,5 +40,5 @@ angular.module('myApp').controller('myCtrl', function($scope,$rootScope,$http, $
             data: [85, 23, 98, 45.6, 76.4, 80.2, 23.9, 105, 120, 91.4, 40, 33]
         }]
     };
-    console.log("controller chartOptions", $scope.chartOptions.series[0].data);
+
 })
