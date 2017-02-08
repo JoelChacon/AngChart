@@ -8,7 +8,6 @@ angular.module('myApp').controller('myCtrl', function($scope,$rootScope,$http, $
         var temporary = [];
         for(var i = 1; i <= 12; i++) {
             var temp = $scope.data['num' + i];
-            debugger;
             if(!temp) {
                 alert("missing data!");
                 return;
@@ -17,6 +16,7 @@ angular.module('myApp').controller('myCtrl', function($scope,$rootScope,$http, $
             }     
         }
         var promise = myFactory.postInfo(temporary);
+        
         promise.then(function(data) {
             $scope.storedData = data;
             $rootScope.$broadcast("updateData");    
@@ -24,12 +24,6 @@ angular.module('myApp').controller('myCtrl', function($scope,$rootScope,$http, $
         })
     };
     /////////
-    // $scope.save = function(){
-    //     $timeout(function(){
-    //         window.alert("hi!");
-    //     });
-
-    // };
     $scope.chartOptions = {
         chart: {
             events: {
