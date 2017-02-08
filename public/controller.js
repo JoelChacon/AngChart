@@ -43,7 +43,7 @@ angular.module('myApp').controller('myCtrl', function($scope,$rootScope,$http, $
             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         },
         series: [{
-            data: [85, 23, 98, 45.6, 76.4, 80.2, 23.9, 105, 120, 91.4, 40, 33]
+            data: []
         }]
     };
 
